@@ -4,7 +4,7 @@ spec:
   services:
     - name: digitalocean-exporter
       github:
-        repo: metalmatze/digitalocean_exporter
+        repo: weslien/digitalocean_exporter
         branch: master
       http_port: 9212
       health_check:
