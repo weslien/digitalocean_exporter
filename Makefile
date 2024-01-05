@@ -1,5 +1,5 @@
 EXECUTABLE ?= digitalocean_exporter
-IMAGE ?= metalmatze/$(EXECUTABLE)
+IMAGE ?= weslien/$(EXECUTABLE)
 GO := CGO_ENABLED=0 go
 DATE := $(shell date -u '+%FT%T%z')
 
