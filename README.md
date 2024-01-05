@@ -1,30 +1,30 @@
 # DigitalOcean Exporter [![Build Status](https://cloud.drone.io/api/badges/metalmatze/digitalocean_exporter/status.svg)](https://cloud.drone.io/metalmatze/digitalocean_exporter)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/metalmatze/digitalocean_exporter.svg?maxAge=604800)](https://hub.docker.com/r/metalmatze/digitalocean_exporter)
-[![Go Report Card](https://goreportcard.com/badge/github.com/metalmatze/digitalocean_exporter)](https://goreportcard.com/report/github.com/metalmatze/digitalocean_exporter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/weslien/digitalocean_exporter)](https://goreportcard.com/report/github.com/weslien/digitalocean_exporter)
 
 Prometheus exporter for various metrics about your [DigitalOcean](https://www.digitalocean.com/) droplets, volumes, snapshots & networks and much more, written in Go.
 
 ### Installation
 
 For pre-built binaries please take a look at the releases.  
-https://github.com/metalmatze/digitalocean_exporter/releases
+https://github.com/weslien/digitalocean_exporter/releases
 
 To deploy directly onto digitalocean, click the button below.  
-[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/metalmatze/digitalocean_exporter/tree/master)
+[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/weslien/digitalocean_exporter/tree/master)
 
 #### Docker
 
 ```bash
-docker pull metalmatze/digitalocean_exporter:0.6.1
-docker run --rm -p 9212:9212 -e DIGITALOCEAN_TOKEN=XXX metalmatze/digitalocean_exporter:0.6.1
+docker pull weslien/digitalocean_exporter:0.6.1
+docker run --rm -p 9212:9212 -e DIGITALOCEAN_TOKEN=XXX weslien/digitalocean_exporter:0.6.1
 ```
 
 Example `docker-compose.yml` with Transmission also running in docker.
 
 ```yaml
 digitalocean_exporter:
-    image: metalmatze/digitalocean_exporter:0.6.1
+    image: weslien/digitalocean_exporter:0.6.1
     environment:
     - '-do.token=XXX'
     restart: always
@@ -96,7 +96,7 @@ Please check [example.rules.yaml](example.rules.yml).
 You obviously should get the code
 
 ```bash
-go get -u github.com/metalmatze/digitalocean_exporter
+go get -u github.com/weslien/digitalocean_exporter
 ```
 
 This should already put a binary called `digitalocean_exporter` into `$GOPATH/bin`.
