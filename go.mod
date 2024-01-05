@@ -1,4 +1,4 @@
-module github.com/metalmatze/digitalocean_exporter
+module github.com/weslien/digitalocean_exporter
 
 go 1.13
 
